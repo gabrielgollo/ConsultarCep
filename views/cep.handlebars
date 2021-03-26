@@ -1,0 +1,33 @@
+ <div class="align-middle">
+        <form action="/" method="POST" id="main-form" role="form">
+            <div class="align-middle form-group col-sm-12">
+                <br>
+                <br>
+                {{#if cep}}
+                    <h4>Faça uma Consulta</h4>
+                {{else}}
+                    <h3>Digite um CEP!</h3>
+                {{/if}}
+                
+                    <label for="inputCep">CEP</label>
+                    <input type="text" name="inCEP" id="ex2" class="form-control cep-mask" placeholder="Ex.: 00000-000" data-mask="00000/000">
+                    <button type="submit" class="btn btn-default">Consultar</button>
+            </div>
+        </form>
+    
+        <br>
+        <br>
+        
+
+        {{#if endereço}}
+            <div class="align-middle col-sm-12">
+                <h3> Endereço para {{cep}} </h3>
+                <p></p>
+                <h4>Logradouro: {{rua}}, </h4>
+                <h4>Bairro: {{bairro}}</h4>
+                <h5>Cidade/UF: {{cidade}}, {{estado}}</h5>
+            </div>    
+        {{else}}
+            <!nothing here>
+        {{/if}}
+</div>
